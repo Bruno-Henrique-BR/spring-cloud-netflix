@@ -1,7 +1,9 @@
 ```markdown
 # Microsserviços com Spring Cloud Netflix, RabbitMQ e Docker Compose
 
-Este repositório contém a implementação de dois microsserviços, `microservico-produto` e `microservico-pagamento`, que se comunicam via RabbitMQ. Além disso, o projeto inclui um serviço de autenticação utilizando Spring Security e JWT, um servidor de descoberta (Eureka Server) e um gateway utilizando o Netflix Zuul. A base de dados utilizada é o MySQL.
+Este repositório contém a implementação de dois microsserviços, `microservico-produto` e `microservico-pagamento`,
+que se comunicam via RabbitMQ. Além disso, o projeto inclui um serviço de autenticação utilizando Spring Security e JWT,
+um servidor de descoberta (Eureka Server) e um gateway utilizando o Netflix Zuul. A base de dados utilizada é o MySQL.
 
 ## Tecnologias Utilizadas
 
@@ -57,9 +59,9 @@ Certifique-se de ter o Docker e Docker Compose instalados em seu ambiente.
 3. **Os serviços estarão disponíveis nos seguintes endereços:**
    - `microservico-produto`: [http://localhost:8081](http://localhost:8081)
    - `microservico-pagamento`: [http://localhost:8082](http://localhost:8082)
-   - Serviço de Autenticação: [http://localhost:8083](http://localhost:8083)
-   - Eureka Server: [http://localhost:8761](http://localhost:8761)
-   - Zuul Gateway: [http://localhost:8765](http://localhost:8765)
+   - `auth`: [http://localhost:8083](http://localhost:8083)
+   - `discovery`: [http://localhost:8761](http://localhost:8761)
+   - `gateway`: [http://localhost:8765](http://localhost:8765)
 
 Agora você pode explorar e testar a comunicação entre os microsserviços utilizando o RabbitMQ, além de utilizar o Zuul como gateway e o Eureka para descoberta de serviços. Certifique-se de adaptar as configurações conforme necessário para o seu ambiente específico.
 ```
