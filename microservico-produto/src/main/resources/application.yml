@@ -1,0 +1,40 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /microservico-produto
+
+spring:
+  application:
+    name: microservico-produto
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQLDialect
+  jmx:
+    enable: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/produto
+    username: root
+    password: 1999
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+produto:
+  rabbitmq:
+    exchange: produto.exchange
+    routingkey: micro.produto.routingkey
+security:
+  jwt:
+    token:
+      secret-key: chave_microservices
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/registry/eureka
